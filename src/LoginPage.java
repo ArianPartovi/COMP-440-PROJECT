@@ -29,7 +29,7 @@ public class LoginPage extends JFrame {
         usernameField = new JTextField(15);
         passwordField = new JPasswordField(15);
         loginButton = new JButton("Login");
-        showPasswordBtn = new JButton("👁️");
+        showPasswordBtn = new JButton("Show");
 
         JPanel passwordPanel = new JPanel(new BorderLayout());
         passwordPanel.add(passwordField, BorderLayout.CENTER);
@@ -60,7 +60,7 @@ public class LoginPage extends JFrame {
         showPasswordBtn.addActionListener(e -> {
             isPasswordVisible = !isPasswordVisible;
             passwordField.setEchoChar(isPasswordVisible ? (char) 0 : '•');
-            showPasswordBtn.setText(isPasswordVisible ? "🙈" : "👁️");
+            showPasswordBtn.setText(isPasswordVisible ? "Hide" : "Show");
         });
 
         loginButton.addActionListener(e -> login());
